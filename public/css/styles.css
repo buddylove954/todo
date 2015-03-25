@@ -1,0 +1,23 @@
+h1 {
+	color: seagreen;
+	background-color: black;
+	text-align: center;
+}
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: red;
+	text-decoration: line-through;
+}
+
+a:hover {
+	background-color: seagreen;
+	color: black;
+}
+
+li {
+	text-align: center;
+}

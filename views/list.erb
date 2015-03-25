@@ -1,0 +1,17 @@
+<html>
+
+<header>
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+</header>
+	<h1> List of Tasks </h1>
+	<a href="http://localhost:4567/">Home</a>
+<body>
+<% @print_list.each_with_index do |task, index| %>
+<div class="center">
+	<li><a href="/<%=index %>"><%="#{task.text} - #{task.time}" %></a></li> 
+</div>
+<% end %>
+
+</body>
+
+</html>

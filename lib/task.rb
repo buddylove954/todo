@@ -1,10 +1,11 @@
 class Task
-	attr_reader :string
-	def initialize(string)
-		@string = string
+	attr_reader :text
+	def initialize(text)
+		@text = text
 	end
 
 	def time
-		Time.now
+		name = Time.now
 	end
+
 end
