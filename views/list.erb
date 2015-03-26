@@ -8,10 +8,20 @@
 <body>
 <% @print_list.each_with_index do |task, index| %>
 <div class="center">
-	<li><a href="/<%=index %>"><%="#{task.text} - #{task.time}" %></a></li> 
-</div>
+
+	<% if task.completed? == true %>
+	<li>
+		<a href="/<%=index %>"><%="#{task.text} -- #{task.time}-- completed" %></a>
+
+		<a href="/complete/<%=index %>"> Delete </a>
+	</li>
+
+	<% else %>
+	 <li><a href="/<%=index %>"><%="#{task.text} - #{task.time}" %></a></li> 
+	 <% end %>
 <% end %>
 
+</div>
 </body>
 
 </html>

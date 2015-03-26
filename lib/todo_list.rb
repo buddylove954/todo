@@ -7,10 +7,18 @@ class TodoList
 	end
 
   def add(task)
-  	task = Task.new(task)
- 	@lists << task
-    puts task.text, task.time
+  	my_task = Task.new(task)
+  	if my_task.text == "urgent"
+  		@lists.unshift(my_task)
+  	else
+ 	@lists << my_task
+ end
+end
+
+  def delete(list_item)
+  	@lists.delete_at(list_item)
   end
+
 end
 
 
